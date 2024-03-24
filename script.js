@@ -13,26 +13,26 @@ function calcular(event) {
 
     if (imc < 17) {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está muito abaixo do peso.'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc.toFixed(2) + '<br/> Cuidado! Você está muito abaixo do peso.'
     }
 
     else if (imc < 18.5) {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está abaixo do peso.'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc.toFixed(2) + '<br/> Cuidado! Você está abaixo do peso.'
     }
 
     else if (imc < 25) {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Tudo certo por aqui!'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc.toFixed(2) + '<br/> Tudo certo por aqui!'
     }
 
     else if (imc < 30) {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está acima do peso.'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc.toFixed(2) + '<br/> Cuidado! Você está acima do peso.'
     }
 
     else {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está com obesidade.'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc.toFixed(2) + '<br/> Cuidado! Você está com obesidade.'
     }
 }
