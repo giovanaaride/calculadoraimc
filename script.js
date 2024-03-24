@@ -3,7 +3,7 @@ let altura;
 let imc;
 let resultado;
 
-function calcular(event){
+function calcular(event) {
     event.preventDefault();
 
     peso = document.getElementById('peso').value;
@@ -11,23 +11,28 @@ function calcular(event){
 
     imc = peso / (altura * altura);
 
-    if(imc < 17){
+    if (imc < 17) {
         resultado = document.getElementById('resultado');
         resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está muito abaixo do peso.'
     }
-    
-     else if(imc <= 18.5){
+
+    else if (imc < 18.5) {
         resultado = document.getElementById('resultado');
         resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está abaixo do peso.'
     }
 
-    else if(imc <= 25){
+    else if (imc < 25) {
         resultado = document.getElementById('resultado');
         resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Tudo certo por aqui!'
     }
 
-    else{
+    else if (imc < 30) {
         resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está muito acima do peso.'
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está acima do peso.'
+    }
+
+    else {
+        resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<br/> Seu resultado foi:' + imc + '<br/> Cuidado! Você está com obesidade.'
     }
 }
